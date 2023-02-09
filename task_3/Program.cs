@@ -1,11 +1,11 @@
 ﻿// Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-void FillArray(double[] numbers)
+void FillArray(double[] array)
 {
     Random rnd = new Random();
-    for (int i = 0; i < numbers.Length; i++)
+    for (int i = 0; i < array.Length; i++)
         {
-            numbers[i] = Math.Round((rnd.NextDouble() * 100), 1);
+            array[i] = Math.Round((rnd.NextDouble() * 100), 1);
         }
 }
 void PrintArray(double[] array)
@@ -16,20 +16,20 @@ void PrintArray(double[] array)
     }
 }
 
-(double, double, double) FindMaxMinDiff(double[] numbers)
+(double, double, double) FindMaxMinDiff(double[] array)
 {
-    double max = numbers[0];
-    double min = numbers[0];
+    double max = array[0];
+    double min = array[0];
     double diff = 0;
-    for(int i = 0; i < numbers.Length; i++)
+    for(int i = 0; i < array.Length; i++)
     {
-        if(numbers[i] > max)
+        if(array[i] > max)
         {
-            max = numbers[i];
+            max = array[i];
         }
-        if(numbers[i] < min)
+        if(array[i] < min)
         {
-            min = numbers[i];
+            min = array[i];
         }
     }
     diff = max - min;
