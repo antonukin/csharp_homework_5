@@ -1,6 +1,6 @@
 ﻿// Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве
 
-void FillArray(int[] arr, int dimention)
+void FillArray(int[] arr)
 {
     Random rnd = new Random();
     for (int i = 0; i < arr.Length; i++)
@@ -32,7 +32,7 @@ return (evenCount, unevenCount);
 Console.WriteLine("Введите размер массива");
 int dim = Convert.ToInt32(Console.ReadLine());
 int[] array = new int[dim];
-FillArray(array, dim);
+FillArray(array);
 PrintArray(array);
 Console.WriteLine();
 
